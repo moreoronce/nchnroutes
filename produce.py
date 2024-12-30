@@ -7,7 +7,7 @@ import math
 parser = argparse.ArgumentParser(description='Generate non-China routes for BIRD.')
 parser.add_argument('--exclude', metavar='CIDR', type=str, nargs='*',
                     help='IPv4 ranges to exclude in CIDR format')
-parser.add_argument('--next', default="wg0", metavar = "INTERFACE OR IP",
+parser.add_argument('--next', default="eth0", metavar = "INTERFACE OR IP",
                     help='next hop for where non-China IP address, this is usually the tunnel interface')
 parser.add_argument('--ipv4-list', choices=['apnic', 'ipip'], default=['apnic', 'ipip'], nargs='*',
                     help='IPv4 lists to use when subtracting China based IP, multiple lists can be used at the same time (default: apnic ipip)')
@@ -45,7 +45,7 @@ RESERVED = [
     IPv4Network('10.0.0.0/8'),
     IPv4Network('127.0.0.0/8'),
     IPv4Network('169.254.0.0/16'),
-    IPv4Network('172.16.0.0/12'),
+    IPv4Network('172.24.0.0/13'),
     IPv4Network('192.0.0.0/29'),
     IPv4Network('192.0.0.170/31'),
     IPv4Network('192.0.2.0/24'),
