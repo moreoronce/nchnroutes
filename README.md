@@ -1,5 +1,14 @@
 # nchnroutes
 
+## Changes after forking
++ Modified the upstream address of the china_ip_list to the china_ip_list provided by mayaxcn.
++ Adjusted the reserved IP address ranges, excluding the 172.64.0.0/13 range used by Cloudflare.
++ Modified the Makefile commands for OpenWRT, removing the sudo requirement.
+
+You can check the full user guide here 
+https://www.dolingou.com/article/openwrt-bird-ospf-traffic-split-china
+
+## The original content
 Similar to chnroutes, but instead generates routes that are not originating from Mainland
 China and generates result in BIRD static route format
 
