@@ -6,7 +6,7 @@
 + Modified the Makefile commands for OpenWRT, removing the sudo requirement.
 
 You can check the full user guide here 
-https://www.dolingou.com/article/openwrt-bird-ospf-traffic-split-china
+https://deeprouter.org/article/openwrt-bird-ospf-traffic-split-china
 
 ## The original content
 Similar to chnroutes, but instead generates routes that are not originating from Mainland
